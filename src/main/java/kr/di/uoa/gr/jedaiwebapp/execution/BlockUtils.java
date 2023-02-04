@@ -91,10 +91,10 @@ public class BlockUtils {
      * @return Number of comparisons
      */
     public static float getTotalComparisons(List<AbstractBlock> blocks) {
-        float originalComparisons = 0f;
+        long originalComparisons = 0;
         originalComparisons = blocks.stream()
                 .map(AbstractBlock::getNoOfComparisons)
-                .reduce(originalComparisons, (accumulator, _item) -> accumulator + _item);
+                .reduce(originalComparisons, Long::sum);
         System.out.println("Original comparisons\t:\t" + originalComparisons);
         return originalComparisons;
     }

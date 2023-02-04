@@ -31,7 +31,6 @@ import org.scify.jedai.entityclustering.CutClustering;
 import org.scify.jedai.entityclustering.IEntityClustering;
 import org.scify.jedai.entityclustering.MarkovClustering;
 import org.scify.jedai.entityclustering.MergeCenterClustering;
-import org.scify.jedai.entityclustering.RicochetSRClustering;
 import org.scify.jedai.entityclustering.RowColumnClustering;
 import org.scify.jedai.entityclustering.UniqueMappingClustering;
 import org.scify.jedai.prioritization.GlobalProgressiveSortedNeighborhood;
@@ -129,9 +128,6 @@ public class MethodConfigurations {
                 break;
             case JedaiOptions.MERGE_CENTER_CLUSTERING:
                 method = new MergeCenterClustering();
-                break;
-            case JedaiOptions.RICOCHET_SR_CLUSTERING:
-                method = new RicochetSRClustering();
                 break;
             case JedaiOptions.UNIQUE_MAPPING_CLUSTERING:
                 method = new UniqueMappingClustering();

@@ -32,7 +32,6 @@ import org.scify.jedai.entityclustering.CutClustering;
 import org.scify.jedai.entityclustering.IEntityClustering;
 import org.scify.jedai.entityclustering.MarkovClustering;
 import org.scify.jedai.entityclustering.MergeCenterClustering;
-import org.scify.jedai.entityclustering.RicochetSRClustering;
 import org.scify.jedai.entityclustering.RowColumnClustering;
 import org.scify.jedai.entityclustering.UniqueMappingClustering;
 import org.scify.jedai.entitymatching.GroupLinkage;
@@ -367,11 +366,6 @@ public class DynamicMethodConfiguration {
 				
 			case JedaiOptions.MERGE_CENTER_CLUSTERING:
 				ecMethod = new MergeCenterClustering(
-                    Float.parseFloat((String) parameters.get(0).getValue()));
-				break;
-				
-			case JedaiOptions.RICOCHET_SR_CLUSTERING:
-				ecMethod = new RicochetSRClustering(
                     Float.parseFloat((String) parameters.get(0).getValue()));
 				break;
 				

@@ -81,7 +81,7 @@ public class WorkflowDetailsManager {
 		PrintStream old = System.out;
 		System.setOut(ps);
 		
-		blp.printStatistics(totalTime, methodConfiguration, methodName);
+		blp.printStatistics((long) totalTime, methodConfiguration, methodName);
 		
 		System.out.flush();
 		System.setOut(old);
@@ -106,7 +106,7 @@ public class WorkflowDetailsManager {
 		PrintStream old = System.out;
 		System.setOut(ps);
 		
-		 clp.printStatistics(totalTime, methodName,methodConfiguration);
+		 clp.printStatistics((long) totalTime, methodName,methodConfiguration);
 		
 		System.out.flush();
 		System.setOut(old);
